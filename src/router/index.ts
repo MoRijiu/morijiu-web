@@ -9,13 +9,18 @@ import { createRouter, createWebHistory,  } from 'vue-router'
  
 export const routes = [
     {
-        path: '/',
-        redirect: '/index',
+        path: '/index',
+        redirect: '/',
     },
     {
         name: 'index',
-        path: '/index',
+        path: '/',
         component: () => import("../pages/index.vue")
+    },
+    {
+        name: 'guide',
+        path: '/guide',
+        component: () => import("../pages/guide/index.vue")
     },
  
 ]
